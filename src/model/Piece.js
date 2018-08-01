@@ -1,7 +1,7 @@
 class Piece {
-  constructor(color) {
+  constructor(color, type) {
     this.color = color;
-
+    this.type = type;
   };
 
 };
