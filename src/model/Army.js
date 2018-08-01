@@ -2,7 +2,7 @@ import Piece from './Piece.js';
 
 class Army {
   constructor(color) {
-    this.color = color.string;
+    this.color = color;
     this.pieces = [];
   };
 

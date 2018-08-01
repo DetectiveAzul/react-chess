@@ -18,7 +18,7 @@ describe('Army', function() {
   });
 
   it('should have a color', function () {
-      const actual = army01.color;
+      const actual = army01.color.string;
       const expected = 'Black';
 
       assert.strictEqual(actual, expected);
@@ -36,7 +36,7 @@ describe('Army', function() {
 
     const actualLength = army01.pieces.length;
     const actualType = army01.pieces[0].type;
-    const actualColor = army01.pieces[0].color;
+    const actualColor = army01.pieces[0].color.string;
 
     const expectedLength = 1;
     const expectedType = 'Pawn';

@@ -6,12 +6,12 @@ describe('Piece', function() {
   let piece02;
 
   beforeEach(function() {
-    piece01 = new Piece('Black', 'Pawn');
-    piece02 = new Piece('White', 'Knight');
+    piece01 = new Piece({"string": "Black", "hex": "#000000"}, 'Pawn');
+    piece02 = new Piece({"string": "White", "hex": "#e6d690"}, 'Knight');
   });
 
   it('should have a color', function () {
-      const actual = piece01.color;
+      const actual = piece01.color.string;
       const expected = 'Black';
       assert.deepStrictEqual(actual, expected);
     });
