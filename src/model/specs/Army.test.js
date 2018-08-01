@@ -11,8 +11,14 @@ describe('Piece', function() {
   });
 
   it('should have a color', function () {
-      const actual = army01.color
-      const expected = 'black'
+      const actual = army01.color;
+      const expected = 'black';
+      assert.deepStrictEqual(actual, expected);
+    });
+
+  it('should have pieces', function () {
+      const actual = army02.pieces.length;
+      const expected = 0;
       assert.deepStrictEqual(actual, expected);
     });
 
