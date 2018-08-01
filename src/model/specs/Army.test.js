@@ -1,19 +1,25 @@
 import assert from 'assert';
 import Army from '../Army.js';
-import seed from '../pieces/PieceSeed.js';
+import pieceSeed from '../pieces/pieceSeed.js';
 
-describe('Piece', function() {
+describe('Army', function() {
   let army01;
   let army02;
 
   beforeEach(function() {
-    army01 = new Army('black');
-    army02 = new Army('white');
+    army01 = new Army({
+      "string": "Black",
+      "hex": "#000000"
+    });
+    army02 = new Army(  {
+        "string": "White",
+        "hex": "#e6d690"
+      });
   });
 
   it('should have a color', function () {
       const actual = army01.color;
-      const expected = 'black';
+      const expected = 'Black';
 
       assert.strictEqual(actual, expected);
     });
@@ -34,7 +40,7 @@ describe('Piece', function() {
 
     const expectedLength = 1;
     const expectedType = 'Pawn';
-    const expectedColor = 'black';
+    const expectedColor = 'Black';
 
     assert.strictEqual(actualLength, expectedLength);
     assert.strictEqual(actualType, expectedType);
@@ -58,7 +64,7 @@ describe('Piece', function() {
   });
 
   it('should be able to create the whole set of pieces', function() {
-    army01.createArmy(seed);
+    army01.populateArmy(pieceSeed);
     const actual = army01.pieces.length;
     const expected = 16;
 

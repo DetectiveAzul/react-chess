@@ -1,10 +1,10 @@
 export default [
   {
-    "color": "Black",
+    "string": "Black",
     "hex": "#000000"
   },
   {
-    "color": "White",
+    "string": "White",
     "hex": "#e6d690"
   }
 ]

@@ -2,7 +2,7 @@ import Piece from './Piece.js';
 
 class Army {
   constructor(color) {
-    this.color = color;
+    this.color = color.string;
     this.pieces = [];
   };
 
@@ -15,9 +15,9 @@ class Army {
     for (var i = 0; i < piece.ammount; i++) {
       this.createPiece(piece);
     };
-  }
+  };
 
-  createArmy(seed) {
+  populateArmy(seed) {
     seed.forEach((piece) => {
       this.createPieces(piece);
     });

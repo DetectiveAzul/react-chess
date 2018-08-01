@@ -6,19 +6,19 @@ describe('Piece', function() {
   let piece02;
 
   beforeEach(function() {
-    piece01 = new Piece('black', 'pawn');
-    piece02 = new Piece('white', 'knight');
+    piece01 = new Piece('Black', 'Pawn');
+    piece02 = new Piece('White', 'Knight');
   });
 
   it('should have a color', function () {
       const actual = piece01.color;
-      const expected = 'black';
+      const expected = 'Black';
       assert.deepStrictEqual(actual, expected);
     });
 
   it('should have a type', function() {
     const actual = piece02.type;
-    const expected = 'knight';
+    const expected = 'Knight';
     assert.deepStrictEqual(actual, expected);
   });
 
