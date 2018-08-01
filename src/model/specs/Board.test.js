@@ -60,7 +60,6 @@ describe('Board', function() {
   });
 
   it('should be able to create a grid of 8 rows with 8 cells', function() {
-    board.createCells(colorSeed);
     board.createGrid();
 
     const actualGridLength = board.grid.length;

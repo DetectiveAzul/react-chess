@@ -1,4 +1,5 @@
 import Cell from './Cell.js';
+import colorSeed from './pieces/colorSeed.js';
 
 class Board {
   constructor(size) {
@@ -39,6 +40,9 @@ class Board {
   //On a board of size 8:
   //This function should create 8 rows
   createGrid() {
+    //Create the cells, and then create the Grid
+    this.createCells(colorSeed);
+    
     for (var i = 0; i < this.size; i++) {
       this.grid.push(this.createGridRow());
     };
