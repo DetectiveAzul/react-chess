@@ -1,6 +1,7 @@
 import assert from 'assert';
 import Cell from '../Cell.js';
 import Piece from '../Piece.js';
+import colorSeed from '../pieces/colorSeed.js';
 
 describe('Cell', function() {
   let cell01;
@@ -8,10 +9,10 @@ describe('Cell', function() {
   let piece;
 
   beforeEach(function() {
-    piece = new Piece({"string": "Black", "hex": "#000000"}, 'Pawn');
+    piece = new Piece(colorSeed[0], 'Pawn');
 
-    cell01 = new Cell({"string": "Black", "hex": "#000000"});
-    cell02 = new Cell({"string": "White", "hex": "#e6d690"}, piece);
+    cell01 = new Cell(colorSeed[0]);
+    cell02 = new Cell(colorSeed[1], piece);
 
   });
 

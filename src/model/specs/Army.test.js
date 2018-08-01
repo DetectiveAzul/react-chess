@@ -1,20 +1,15 @@
 import assert from 'assert';
 import Army from '../Army.js';
 import pieceSeed from '../pieces/pieceSeed.js';
+import colorSeed from '../pieces/colorSeed.js';
 
 describe('Army', function() {
   let army01;
   let army02;
 
   beforeEach(function() {
-    army01 = new Army({
-      "string": "Black",
-      "hex": "#000000"
-    });
-    army02 = new Army(  {
-        "string": "White",
-        "hex": "#e6d690"
-      });
+    army01 = new Army(colorSeed[0]);
+    army02 = new Army(colorSeed[1]);
   });
 
   it('should have a color', function () {
