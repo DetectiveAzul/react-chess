@@ -3,13 +3,12 @@ import Cell from './Cell.js';
 class Board {
   constructor(size) {
     this.size = size;
-    this.boardCells = []
-    this.grid = []
+    this.boardCells = [];
+    this.grid = [];
   };
 
   createCell(color) {
-    const newCell = new Cell(color);
-    this.boardCells.push(newCell);
+    return new Cell(color);
   };
 
   //On a board of size 8:
@@ -18,13 +17,32 @@ class Board {
   //the black color)
 
   createCells(seed) {
-    for (var i = 0; i < size * 2; i++) {
+    const numberOfLoops = Math.pow(this.size, 2)/2;
+    for (var i = 0; i < numberOfLoops ; i++) {
       seed.forEach((color) => {
-        createCell(color);
+        this.boardCells.push(this.createCell(color));
       });
     };
   };
 
+  //Take the first 8 cells from boardCells array and put them on a new array
+  //Return them to createGrid()
+  createGridRow() {
+    const newRow = [];
+    for (var i = 0; i < this.size; i++) {
+      const shiftedCell = this.boardCells.shift();
+      newRow.push(shiftedCell);
+    };
+    return newRow;
+  };
+
+  //On a board of size 8:
+  //This function should create 8 rows
+  createGrid() {
+    for (var i = 0; i < this.size; i++) {
+      this.grid.push(this.createGridRow());
+    };
+  };
 
 };
 

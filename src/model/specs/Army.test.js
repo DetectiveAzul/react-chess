@@ -1,5 +1,6 @@
 import assert from 'assert';
 import Army from '../Army.js';
+import Piece from '../Piece.js';
 import pieceSeed from '../pieces/pieceSeed.js';
 import colorSeed from '../pieces/colorSeed.js';
 
@@ -27,20 +28,9 @@ describe('Army', function() {
     });
 
   it('should be able to create a piece', function() {
-    army01.createPiece({"type": "Pawn", "ammount": 8});
-
-    const actualLength = army01.pieces.length;
-    const actualType = army01.pieces[0].type;
-    const actualColor = army01.pieces[0].color.string;
-
-    const expectedLength = 1;
-    const expectedType = 'Pawn';
-    const expectedColor = 'Black';
-
-    assert.strictEqual(actualLength, expectedLength);
-    assert.strictEqual(actualType, expectedType);
-    assert.strictEqual(actualColor, expectedColor);
-
+    const actualPiece = army01.createPiece(pieceSeed[0]);
+    const expectedPiece = new Piece(colorSeed[0], "Pawn");
+    assert.deepStrictEqual(actualPiece, expectedPiece);
   });
 
   it('should be able to create a specific number of same type pieces', function() {

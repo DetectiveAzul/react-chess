@@ -7,13 +7,12 @@ class Army {
   };
 
   createPiece(piece) {
-    const newPiece = new Piece(this.color, piece.type);
-    this.pieces.push(newPiece);
+    return new Piece(this.color, piece.type);
   };
 
   createPieces(piece) {
     for (var i = 0; i < piece.ammount; i++) {
-      this.createPiece(piece);
+      this.pieces.push(this.createPiece(piece));
     };
   };
 
