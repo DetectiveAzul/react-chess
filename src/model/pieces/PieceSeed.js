@@ -1,4 +1,4 @@
-[
+export default [
   {
     "type": "Pawn",
     "ammount": 8,

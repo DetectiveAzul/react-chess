@@ -1,4 +1,4 @@
-[
+export default [
   {
     "color": "Black",
     "hex": "#000000"
