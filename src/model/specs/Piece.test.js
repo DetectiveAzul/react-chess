@@ -11,14 +11,14 @@ describe('Piece', function() {
   });
 
   it('should have a color', function () {
-      const actual = piece01.color
-      const expected = 'black'
+      const actual = piece01.color;
+      const expected = 'black';
       assert.deepStrictEqual(actual, expected);
     });
 
   it('should have a type', function() {
-    const actual = piece02.type
-    const expected = 'knight'
+    const actual = piece02.type;
+    const expected = 'knight';
     assert.deepStrictEqual(actual, expected);
   });
 
