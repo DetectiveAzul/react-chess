@@ -20,6 +20,6 @@ describe('Piece', function() {
     const actual = piece02.type
     const expected = 'knight'
     assert.deepStrictEqual(actual, expected);
-  })
+  });
 
 });
